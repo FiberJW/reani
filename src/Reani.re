@@ -29,13 +29,10 @@ let run = () => {
        let gifPaths =
          FS.readdirSync(gifDirPath.value)
          |> Array.map(p => gifDirPath.value ++ "/" ++ p);
-
        let gifsCount = gifPaths |> Array.length;
 
        Random.self_init();
-
        let randomGifIndex = Random.int(gifsCount);
-
        let randomGifPath = gifPaths->Array.get(randomGifIndex);
 
        Js.log(
@@ -43,7 +40,6 @@ let run = () => {
        );
 
        nodeOpen(randomGifPath) |> ignore;
-
        Js.Promise.resolve();
      });
 };
