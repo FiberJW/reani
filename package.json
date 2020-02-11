@@ -1,0 +1,23 @@
+{
+  "name": "reani",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "postinstall": "npm run build"
+  },
+  "bin": "./bin.js",
+  "keywords": [
+    "BuckleScript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "bs-platform": "^7.0.1"
+  },
+  "dependencies": {
+    "open": "^7.0.2",
+    "prompts": "^2.3.0"
+  }
+}
