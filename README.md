@@ -1,18 +1,11 @@
-# Basic Reason Template
+# `reani`
 
-Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
+## Getting Started
 
-# Build
-```
-npm run build
-```
+`npm i -g reani`
 
-# Build + Watch
+or
 
-```
-npm run start
-```
+git clone this repo
 
-
-# Editor
-If you use `vscode`, Press `Windows + Shift + B` it will build automatically
+add this line to your bashrc/zshrc: `alias reani="~/Code/reani/bin.js"`
