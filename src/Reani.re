@@ -1,5 +1,6 @@
 [@bs.val] external dirname: string = "__dirname";
 [@bs.module] external nodeOpen: string => Js.Promise.t(unit) = "open";
+[@bs.module] external isWSL: bool = "is-wsl";
 
 type gifDir = {
   name: string,
@@ -39,7 +40,19 @@ let run = () => {
          "Opening a random reaction GIF based on your selection in your native photo app.",
        );
 
-       nodeOpen(randomGifPath) |> ignore;
+       if (isWSL) {
+         let command = "explorer.exe `wslpath -w \"" ++ randomGifPath ++ "\"`";
+
+         try(
+           Node.Child_process.execSync(command, Node.Child_process.option())
+           ->ignore
+         ) {
+         | _ => ()
+         };
+       } else {
+         nodeOpen(randomGifPath)->ignore;
+       };
+
        Js.Promise.resolve();
      });
 };
