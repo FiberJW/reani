@@ -1,17 +1,20 @@
 {
   "name": "reani",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
     "postinstall": "npm run build"
   },
-  "bin": "./bin.js",
+  "bin": {
+    "reani": "./reani.js",
+    "lgtm": "./lgtm.js"
+  },
   "keywords": [
     "BuckleScript"
   ],
-  "author": "",
+  "author": "Juwan Wheatley <datwheat@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "^7.0.1"
