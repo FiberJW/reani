@@ -8,4 +8,9 @@ or
 
 git clone this repo
 
-add this line to your bashrc/zshrc: `alias reani="~/Code/reani/bin.js"`
+add these lines to your bashrc/zshrc:
+
+```zsh
+alias reani="~/Code/reani/reani.js"
+alias lgtm="~/Code/reani/lgtm.js"
+```
